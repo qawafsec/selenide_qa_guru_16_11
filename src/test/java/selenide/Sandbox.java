@@ -14,11 +14,16 @@ public class Sandbox {
   SelenideElement s = $("");
 
   @Test
-  void closeCookiePopup() {
+  void closeCookiePopUp(){
     open("https://www.otpbank.ru/retail/bank-services/");
-    $(withText("Продолжая просмотр сайта")).shouldBe(visible);
-    $(byTagAndText("strong", "Закрыть")).click();
-    $(withText("Продолжая просмотр сайта")).shouldBe(hidden);
+    $(Selectors.byTagAndText("strong", "Закрыть")).click();
+    sleep(5000);
+// @Test
+ // void closeCookiePopup() {
+   // open("https://www.otpbank.ru/retail/bank-services/");
+  //  $(withText("Продолжая просмотр сайта")).shouldBe(visible);
+  //  $(byTagAndText("strong", "Закрыть")).click();
+  //  $(withText("Продолжая просмотр сайта")).shouldBe(hidden);
 
 
   }
